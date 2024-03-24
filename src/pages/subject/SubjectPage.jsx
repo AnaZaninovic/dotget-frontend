@@ -40,6 +40,7 @@ function SubjectPage() {
               professors={subjectData ? subjectData.professors : []}
               showSubject={false}
               showInstructionsCount={true}
+              subject = {subjectData?.subject}
             />
           </div>
         </div>

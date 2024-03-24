@@ -11,6 +11,7 @@ function ProfessorsComponent({
   showTime,
   buttonText,
   buttonVariant,
+  subject
 }) {
   const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -59,7 +60,7 @@ function ProfessorsComponent({
                 {buttonText ? buttonText : "Dogovori termin"}
               </Button>
             </div>
-            <DateTimeDialog open={dialogOpen} onClose={handleCloseDialog} professor={professor} />
+            <DateTimeDialog open={dialogOpen} onClose={handleCloseDialog} professor={professor} subject={subject} />
           </div>
           
         ))}

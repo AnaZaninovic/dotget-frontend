@@ -20,7 +20,7 @@ export async function getProfessors() {
   }
 }
 
-export async function sentInstructionDate(selectedDate, professorId) {
+export async function sentInstructionDate(selectedDate, professorId, subjectId) {
   try {
       const response = await fetch(
           import.meta.env.VITE_REACT_BACKEND_URL + "/instructions",
@@ -32,7 +32,8 @@ export async function sentInstructionDate(selectedDate, professorId) {
               },
               body: JSON.stringify({
                   date: selectedDate,
-                  professorId: professorId
+                  professorId: professorId,
+                  subjectId: subjectId
               })
           }
       );
